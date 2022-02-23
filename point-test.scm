@@ -21,6 +21,10 @@
 	(let ((p (make-point 1 2)))
 	  (y-point p))))
 
-;; print-pointのテストの書き方がわからない。
+(test "print-point 01"
+      "\n(1,2)"
+      (lambda ()
+	(with-output-to-string
+	  (lambda () (print-point (make-point 1 2))))))
 
 (test-end :exit-on-failure #t)
