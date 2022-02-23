@@ -65,3 +65,23 @@
              (x-point (sp-rectangle rct))))
      (abs (- (y-point (ep-rectangle rct))
              (y-point (sp-rectangle rct))))))
+
+(define (make-rectangle2 sp width height)
+  (cons sp (cons width height)))
+
+(define (sp-rectangle2 rct)
+  (car rct))
+
+(define (width-rectangle2 rct)
+  (car (cdr rct)))
+
+(define (height-rectangle2 rct)
+  (cdr (cdr rct)))
+
+(define (perimeter-rectangle2 rct)
+  (* 2 (+ (width-rectangle2 rct)
+          (height-rectangle2 rct))))
+
+(define (area-rectangle2 rct)
+  (* (width-rectangle2 rct)
+     (height-rectangle2 rct)))
