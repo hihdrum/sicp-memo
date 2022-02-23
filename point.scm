@@ -45,26 +45,26 @@
 ;; ----------------------------------
 ;; 長方形
 ;; ----------------------------------
-(define (make-rectangle sp ep)
+(define (make-rectangle3 sp ep)
   (cons sp ep))
 
-(define (sp-rectangle rct)
+(define (sp-rectangle3 rct)
   (car rct))
 
-(define (ep-rectangle rct)
+(define (ep-rectangle3 rct)
   (cdr rct))
 
-(define (perimeter-rectangle rct)
-  (* 2 (+ (abs (- (x-point (ep-rectangle rct))
-                  (x-point (sp-rectangle rct))))
-          (abs (- (y-point (ep-rectangle rct))
-                  (y-point (sp-rectangle rct)))))))
+(define (perimeter-rectangle3 rct)
+  (* 2 (+ (abs (- (x-point (ep-rectangle3 rct))
+                  (x-point (sp-rectangle3 rct))))
+          (abs (- (y-point (ep-rectangle3 rct))
+                  (y-point (sp-rectangle3 rct)))))))
 
-(define (area-rectangle rct)
-  (* (abs (- (x-point (ep-rectangle rct))
-             (x-point (sp-rectangle rct))))
-     (abs (- (y-point (ep-rectangle rct))
-             (y-point (sp-rectangle rct))))))
+(define (area-rectangle3 rct)
+  (* (abs (- (x-point (ep-rectangle3 rct))
+             (x-point (sp-rectangle3 rct))))
+     (abs (- (y-point (ep-rectangle3 rct))
+             (y-point (sp-rectangle3 rct))))))
 
 (define (make-rectangle2 sp width height)
   (cons sp (cons width height)))
