@@ -35,9 +35,8 @@
 
 ;; 中間点を返す手続き
 (define (midpoint-segment seg)
+  (define (mid a b) (/ (+ a b) 2))
   (let ((sp (start-segment seg))
 	(ep (end-segment seg)))
-    (make-point (/ (+ (x-point sp) (x-point ep))
-		   2)
-		(/ (+ (y-point sp) (y-point ep))
-		   2))))
+    (make-point (mid (x-point sp) (x-point ep))
+		(mid (y-point sp) (y-point ep)))))
