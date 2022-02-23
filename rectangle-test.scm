@@ -22,7 +22,7 @@
         (make-rectangle (make-point 1 2)
                         (make-point 3 4))))
 
-(test-section "長方形")
+(test-section "周囲の長さ")
 (test* "perimeter-rectangle 01"
        8
        (perimeter-rectangle
@@ -60,7 +60,7 @@
        (height-rectangle2
         (make-rectangle2 (make-point 1 2) 3 4)))
 
-(test-section "長方形")
+(test-section "周囲の長さ")
 (test* "perimeter-rectangle2 01"
        14
        (perimeter-rectangle2
