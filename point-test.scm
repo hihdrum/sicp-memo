@@ -4,27 +4,24 @@
 (load "./point.scm")
 
 (test-section "構築子")
-(test "make-point 01"
-      '(1 . 2)
-      (lambda () (make-point 1 2)))
+(test* "make-point 01"
+       '(1 . 2)
+       (make-point 1 2))
 
 (test-section "選択子")
-(test "x-point 01"
+(test* "x-point 01"
       1
-      (lambda ()
-	(let ((p (make-point 1 2)))
-	  (x-point p))))
+      (let ((p (make-point 1 2)))
+	(x-point p)))
 
-(test "y-point 01"
-      2
-      (lambda ()
-	(let ((p (make-point 1 2)))
-	  (y-point p))))
+(test* "y-point 01"
+       2
+       (let ((p (make-point 1 2)))
+	 (y-point p)))
 
-(test "print-point 01"
-      "\n(1,2)"
-      (lambda ()
-	(with-output-to-string
-	  (lambda () (print-point (make-point 1 2))))))
+(test* "print-point 01"
+       "\n(1,2)"
+       (with-output-to-string
+	 (lambda () (print-point (make-point 1 2)))))
 
 (test-end :exit-on-failure #t)
