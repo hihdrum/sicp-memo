@@ -40,3 +40,28 @@
 	(ep (end-segment seg)))
     (make-point (mid (x-point sp) (x-point ep))
                 (mid (y-point sp) (y-point ep)))))
+
+;; 問題2.3 : 長方形
+;; ----------------------------------
+;; 長方形
+;; ----------------------------------
+(define (make-rectangle sp ep)
+  (cons sp ep))
+
+(define (sp-rectangle rct)
+  (car rct))
+
+(define (ep-rectangle rct)
+  (cdr rct))
+
+(define (perimeter-rectangle rct)
+  (* 2 (+ (abs (- (x-point (ep-rectangle rct))
+                  (x-point (sp-rectangle rct))))
+          (abs (- (y-point (ep-rectangle rct))
+                  (y-point (sp-rectangle rct)))))))
+
+(define (area-rectangle rct)
+  (* (abs (- (x-point (ep-rectangle rct))
+             (x-point (sp-rectangle rct))))
+     (abs (- (y-point (ep-rectangle rct))
+             (y-point (sp-rectangle rct))))))
