@@ -62,10 +62,10 @@
   (* (width-rectangle rct)
      (height-rectangle rct)))
 
+(define (make-rectangle2 sp width height)
+  (make-rectangle width height))
+
 (define (make-rectangle3 sp ep)
   (make-rectangle
    (abs (- (x-point ep) (x-point sp)))
    (abs (- (y-point ep) (y-point sp)))))
-
-(define (make-rectangle2 sp width height)
-  (make-rectangle width height))
