@@ -12,16 +12,16 @@
 (test* "x-point 01"
       1
       (let ((p (make-point 1 2)))
-	(x-point p)))
+        (x-point p)))
 
 (test* "y-point 01"
        2
        (let ((p (make-point 1 2)))
-	 (y-point p)))
+	     (y-point p)))
 
 (test* "print-point 01"
        "\n(1,2)"
        (with-output-to-string
-	 (lambda () (print-point (make-point 1 2)))))
+	     (lambda () (print-point (make-point 1 2)))))
 
 (test-end :exit-on-failure #t)

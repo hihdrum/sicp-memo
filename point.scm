@@ -39,4 +39,4 @@
   (let ((sp (start-segment seg))
 	(ep (end-segment seg)))
     (make-point (mid (x-point sp) (x-point ep))
-		(mid (y-point sp) (y-point ep)))))
+                (mid (y-point sp) (y-point ep)))))
