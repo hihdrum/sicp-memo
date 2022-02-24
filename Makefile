@@ -1,4 +1,4 @@
 check:
-	gosh point-test.scm
-	gosh segment-test.scm
-	gosh rectangle-test.scm
+	gosh test-point.scm
+	gosh test-segment.scm
+	gosh test-rectangle.scm
