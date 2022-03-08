@@ -47,8 +47,7 @@
         (if (pred (car lst))
             (cons (car lst) (parity-help pred (cdr lst)))
             (parity-help pred (cdr lst)))))
-  (cons (car items)
-        (parity-help (if (even? (car items))
-                         even?
-                         odd?)
-                     (cdr items))))
+  (parity-help (if (even? (car items))
+                   even?
+                   odd?)
+               items))
